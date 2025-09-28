@@ -1,0 +1,54 @@
+#root {
+	--color--blue: #2d94d8;
+	--color--lightblue: rgb(0, 166, 255);
+	--color--grey: #95a5a6;
+	--color--darkgrey: #2c3e50;
+	--color--darkergrey: #1a252f;
+	--color--whitish: #ebebeb;
+
+	--project--std: 0.3s; /* short-transition-duration */
+	--project--mtd: 0.8s; /* medium-transition-duration */
+	--project--bs: 0px 0px 26px 0px #e2e2e2;
+	--project--br: 20px;
+	--project--border: 2px solid var(--color--whitish);
+
+	background-color: var(--color--darkergrey);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.app {
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.app.on-load .loading-spinner {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.app.on-intro .intro {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.app.on-slider .slider {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.slide-in-on-show {
+	opacity: 0;
+	transform: translate(0, 4vh);
+	transition-property: opacity, transform;
+	transition-duration: var(--project--mtd);
+	transition-timing-function: ease-out;
+}
+
+.on-show .slide-in-on-show {
+	opacity: 1;
+	transform: none;
+}

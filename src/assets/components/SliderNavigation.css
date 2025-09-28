@@ -1,0 +1,125 @@
+.slider__navigation {
+	--sios--delay: 1.2s;
+
+	position: absolute;
+	right: 40px;
+	bottom: 30px;
+	width: 15vw;
+	height: fit-content;
+	padding: 24px 20px;
+	background-color: var(--color--darkgrey);
+	border-radius: var(--project--br);
+	border: var(--project--border);
+	box-shadow: var(--project--bs);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+
+	opacity: 0;
+	transform: translate(0, 4vh);
+	transition-property: opacity, transform;
+	transition-duration: 0.6s, var(--project--mtd);
+	transition-timing-function: ease-in-out, ease-in-out;
+	transition-delay: 4.4s;
+
+}
+
+.slider.on-scale-in .slider__navigation {
+	opacity: 1;
+	transform: none
+}
+
+.slider__nav-button {
+	position: relative;
+	width: 24px;
+	height: 16px;
+	cursor: pointer;
+	padding: 10px;
+	margin: -10px 0;
+	box-sizing: content-box;
+}
+
+.slider__nav-button::before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-top: var(--project--border);
+	border-right: var(--project--border);
+	border-width: 3px;
+	border-color: var(--color--lightblue);
+	transform: rotate(-45deg);
+	transition: border-color var(--project--std);
+}
+
+.slider__nav-button:last-of-type::before {
+	transform: rotate(135deg);
+}
+
+.slider__nav-button:hover::before,
+.slider__nav-button:active::before {
+	border-color: rgb(82, 209, 252);
+}
+
+.slider__nav-button.disabled {
+	pointer-events: none;
+	cursor: default;
+}
+
+.slider__nav-button.disabled::before {
+	border-color: var(--color--grey);
+}
+
+ol.slider__slide-btns-list {
+	counter-reset: my-counter;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+li.slider__slide-btn {
+	counter-increment: my-counter;
+
+	width: 168px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	padding: 10px 20px;
+	display: flex;
+	gap: 6px;
+	border-radius: 14px;
+	border: var(--project--border);
+	background-color: var(--color--blue);
+	transition-property: font-weight, box-shadow, background-color;
+	transition-duration: 0.5s, 0.5s, var(--project--std);
+	white-space: nowrap;
+}
+
+li.slider__slide-btn::before {
+	content: counter(my-counter)'.';
+	color: var(--color--white);
+}
+
+li.slider__slide-btn:hover,
+li.slider__slide-btn:active {
+	background-color: var(--color--lightblue);
+}
+
+li.slider__slide-btn.current {
+	font-weight: 700;
+	box-shadow: 0px 0px 5px 0px var(--color--whitish);
+	cursor: default;
+	pointer-events: none;
+}

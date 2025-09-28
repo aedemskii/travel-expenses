@@ -1,0 +1,25 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .plane { stroke: #4F86A8; }
+    .graph-up { fill: #6B9B42; }
+    .graph-line { stroke: #6B9B42; }
+    .dollar-circle { fill: #FFFFFF; stroke: #6B9B42; }
+    .dollar-sign { fill: #6B9B42; }
+</style>
+
+<rect x="1" y="11" width="2" height="4" rx="0.5" class="graph-up"/>
+<rect x="4" y="9" width="2" height="6" rx="0.5" class="graph-up"/>
+<rect x="7" y="10" width="2" height="5" rx="0.5" class="graph-up"/>
+<rect x="10" y="7" width="2" height="8" rx="0.5" class="graph-up"/>
+
+<path d="M2 11L5 8L8 9L11 6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="graph-line"/>
+<path d="M11 6L10.5 8M11 6L9 6.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="graph-up"/>
+
+<path d="M4 4.5L12 2.5L14 4L12 5.5L4 7C3.5 7 3.5 6.5 4 6.5L4 4.5Z" stroke="#4F86A8" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" fill="none" class="plane"/>
+<path d="M7 5.75L6 6.75M9 4.75L8 5.75" stroke="#4F86A8" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" fill="none" class="plane"/>
+<path d="M12.5 3.25L13.5 2.5" stroke="#4F86A8" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" fill="none" class="plane"/>
+
+<circle cx="14" cy="13" r="2.5" fill="#FFFFFF" stroke="#6B9B42" stroke-width="0.75"/>
+<text x="14" y="13.5" font-family="Arial, sans-serif" font-size="2.5" font-weight="bold" dominant-baseline="middle" text-anchor="middle" class="dollar-sign">$</text>
+
+</svg>

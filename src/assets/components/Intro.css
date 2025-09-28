@@ -1,0 +1,120 @@
+.intro {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 1s ease-in-out;
+	display: flex;
+	flex-direction: row-reverse;
+	color: var(--color--whitish);
+
+	--bg-transform--duration: 1.2s;
+}
+
+.intro__content {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 60px;
+	padding: 0 10vw 0 5vw;
+}
+
+.intro .slide-in-on-show {
+	transform: translate(2vw, 0);
+}
+
+.intro__title {
+	font-size: 50px;
+	line-height: 1.2;
+	font-weight: 700;
+
+	transition-delay: calc(var(--bg-transform--duration) + 0s);
+}
+
+.intro__subtitle {
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.4;
+
+	transition-delay: calc(var(--bg-transform--duration) + 3.2s);
+}
+
+.intro__slogan {
+	margin-top: 20px;
+	text-align: right;
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--color--lightblue);
+	font-style: italic;
+}
+
+.intro__line--1 {
+	display: inline-block;
+	transition-delay: calc(var(--bg-transform--duration) + 1s);
+	width: 100%;
+	text-align: left;
+}
+
+.intro__line--2 {
+	display: inline-block;
+	transition-delay: calc(var(--bg-transform--duration) + 2s);
+	width: 100%;
+}
+
+.intro__button-wrapper {
+	transition-delay: calc(var(--bg-transform--duration) + 4.4s);
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 1vw;
+	box-sizing: border-box;
+}
+
+.intro__button {
+	font-size: 30px;
+	cursor: pointer;
+	background-color: var(--color--blue);
+	border: var(--project--border);
+	border-radius: var(--project--br);
+	padding: 10px 20px 12px;
+	line-height: 1.2;
+	font-weight: 700;
+	transition-property: background-color;
+	transition-delay: 0s;
+	transition-duration: var(--project--std);
+}
+
+.intro__button:hover,
+.intro__button:active {
+	background-color: var(--color--lightblue);
+}
+
+.intro__background {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro__background img {
+	height: 112%;
+	border-radius: 100%;
+	object-fit: cover;
+
+	transform: scale(0.8) translate(4vw, 0);
+	opacity: 0;
+	box-shadow: 0px 0px 60px 0px var(--color--whitish);
+	transition: opacity 0.6s ease-in-out 0.2s, transform 1.2s ease-in-out;
+}
+
+.intro.on-show .intro__background img {
+	opacity: 1;
+	transform: scale(1) translate(4vw, 0);
+}
