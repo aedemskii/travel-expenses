@@ -21,7 +21,7 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
-	gap: 60px;
+	gap: var(--intro--gap);
 	padding: 0 10vw 0 5vw;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .intro__title {
-	font-size: 50px;
+	font-size: var(--intro-title--fs);
 	line-height: 1.2;
 	font-weight: 700;
 
@@ -38,7 +38,7 @@
 }
 
 .intro__subtitle {
-	font-size: 30px;
+	font-size: var(--intro-subtitle--fs);
 	font-weight: 500;
 	line-height: 1.4;
 
@@ -48,7 +48,7 @@
 .intro__slogan {
 	margin-top: 20px;
 	text-align: right;
-	font-size: 20px;
+	font-size: var(--intro-slogan--fs);
 	font-weight: 700;
 	color: var(--color--lightblue);
 	font-style: italic;
@@ -56,19 +56,21 @@
 
 .intro__line--1 {
 	display: inline-block;
+	margin-right: 0.4em;
 	transition-delay: calc(var(--bg-transform--duration) + 1s);
-	width: 100%;
-	text-align: left;
 }
 
 .intro__line--2 {
 	display: inline-block;
 	transition-delay: calc(var(--bg-transform--duration) + 2s);
-	width: 100%;
+}
+
+.intro__line--3 {
+	transition-delay: calc(var(--bg-transform--duration) + 3s);
 }
 
 .intro__button-wrapper {
-	transition-delay: calc(var(--bg-transform--duration) + 4.4s);
+	transition-delay: calc(var(--bg-transform--duration) + 5.4s);
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -77,7 +79,7 @@
 }
 
 .intro__button {
-	font-size: 30px;
+	font-size: var(--intro-button--fs);
 	cursor: pointer;
 	background-color: var(--color--blue);
 	border: var(--project--border);

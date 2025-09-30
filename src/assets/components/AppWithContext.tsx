@@ -36,6 +36,7 @@ const App: React.FC = () => {
 			<LoadingSpinner />
 			<Intro />
 			<Slider />
+			<div className='app__window-support'>Current window size is not supported</div>
 		</div>
 	)
 }

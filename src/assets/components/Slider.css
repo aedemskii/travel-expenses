@@ -61,7 +61,7 @@
 	top: -2px;
 	left: -2px;
 	max-width: 40%;
-	padding: 6vh 40px;
+	padding: var(--slide-content--padding);
 	background-color: var(--color--darkergrey);
 	border-bottom-right-radius: var(--project--br);
 	overflow: visible;
@@ -89,13 +89,13 @@
 }
 
 .slide__title {
-	font-size: 50px;
+	font-size: var(--slide-title--fs);
 	line-height: 1.2;
 	font-weight: 700;
 }
 
 .slide__subtitle {
-	font-size: 20px;
+	font-size: var(--slide-subtitle--fs);
 	font-weight: 700;
 	color: var(--color--lightblue);
 	margin-top: 20px;
@@ -103,8 +103,8 @@
 }
 
 .slide__text {
-	margin-top: 60px;
-	font-size: 24px;
+	margin-top: var(--slide-text--mt);
+	font-size: var(--slide-text--fs);
 	font-weight: 500;
 	line-height: 1.4;
 	max-width: 94%;

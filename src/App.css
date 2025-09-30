@@ -11,18 +11,82 @@
 	--project--bs: 0px 0px 26px 0px #e2e2e2;
 	--project--br: 20px;
 	--project--border: 2px solid var(--color--whitish);
+}
+
+#root {
+	--intro--gap: 60px;
+	--intro-title--fs: 60px;
+	--intro-subtitle--fs: 30px;
+	--intro-slogan--fs: 20px;
+	--intro-button--fs: 30px;
+	--intro-button--padding: 10px 20px 12px;
+
+	--slide-content--padding: 6vh 40px;
+	--slide-title--fs: 50px;
+	--slide-subtitle--fs: 20px;
+	--slide-text--fs: 22px;
+	--slide-text--mt: 60px;
+
+	--mini-slider--top: unset;
+	--mini-slider--bottom: 30px;
+	--mini-slider--left: 40px;
+	--mini-slider--width: 20%;
+	--mini-slider--height: 18%;
+	--mini-slider--min-width: 340px;
+	--mini-slider--min-height: 200px;
+	--mini-slider--padding: 30px;
+	--mini-slider-item--fs: 20px;
+
+	--slider-navigation--fs: 20px;
+
+	--window-support--display: none;
+
+	@media (max-width: 1760px) or (max-height: 900px) {
+		--intro--gap: 40px;
+		--intro-title--fs: 40px;
+		--intro-subtitle--fs: 20px;
+		--intro-slogan--fs: 16px;
+		--intro-button--fs: 20px;
+		--intro-button--padding: 6px 12px 7px;
+
+		--slide-content--padding: 4vh 20px;
+		--slide-title--fs: 40px;
+		--slide-subtitle--fs: 16px;
+		--slide-text--fs: 18px;
+		--slide-text--mt: 40px;
+
+		--mini-slider--top: unset;
+		--mini-slider--bottom: 20px;
+		--mini-slider--left: 30px;
+		--mini-slider--right: unset;
+		--mini-slider--width: 20vw;
+		--mini-slider--height: 20vh;
+		--mini-slider--min-width: 345px;
+		--mini-slider--min-height: 215px;
+		--mini-slider--padding: 20px;
+		--mini-slider-item--fs: 18px;
+	}
+
+	@media (min-width: 1540px) and (max-height: 760px), (max-width: 1539px) {
+		--mini-slider--top: 30px;
+		--mini-slider--bottom: unset;
+		--mini-slider--left: unset;
+		--mini-slider--right: 30px;
+	}
+
+	@media (max-width: 1200px),	(max-height: 600px) {
+		--window-support--display: flex;
+	}
+}
+
+.app {
+	padding: 30px;
+	box-sizing: border-box;
 
 	background-color: var(--color--darkergrey);
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-}
-
-.app {
-	width: 100%;
-	height: 100%;
-	padding: 30px;
-	box-sizing: border-box;
 }
 
 .app.on-load .loading-spinner {
@@ -38,6 +102,23 @@
 .app.on-slider .slider {
 	opacity: 1;
 	pointer-events: all;
+}
+
+.app__window-support {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color--darkergrey);
+	opacity: 1;
+	transform: none;
+	font-size: 28px;
+	font-weight: 500;
+	color: var(--color--lightblue);
+	display: var(--window-support--display);
+	align-items: center;
+	justify-content: center;
 }
 
 .slide-in-on-show {

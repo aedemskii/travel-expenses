@@ -5,6 +5,7 @@
 	right: 40px;
 	bottom: 30px;
 	width: 15vw;
+	min-width: 202px;
 	height: fit-content;
 	padding: 24px 20px;
 	background-color: var(--color--darkgrey);
@@ -88,7 +89,7 @@ li.slider__slide-btn {
 	counter-increment: my-counter;
 
 	width: 168px;
-	font-size: 20px;
+	font-size: var(--slider-navigation--fs);
 	font-weight: 500;
 	line-height: 1;
 	display: flex;
