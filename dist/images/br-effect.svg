@@ -1,5 +1,0 @@
-<svg width="30" height="30" viewBox="0 15 15 15" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 15 H15 V30 H0 Z
-           M0 30 L0 15 A15 15 0 0 1 15 30 Z"
-        fill="#1a252f" fill-rule="evenodd"/>
-</svg>
